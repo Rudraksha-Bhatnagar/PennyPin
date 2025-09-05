@@ -45,13 +45,17 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.room.runtime)
+    implementation("androidx.cardview:cardview:1.0.0")
     implementation(libs.room.ktx)
+    implementation(libs.protolite.well.known.types)
+    implementation(libs.androidx.material3.android)
     kapt(libs.room.compiler)
 
     implementation(libs.androidx.ui.text.android)
     implementation(libs.androidx.room.common.jvm)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2")
     implementation(libs.androidx.room.runtime.android)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.9.2")
     implementation("androidx.room:room-ktx:2.7.2") // for coroutines support
     implementation(libs.androidx.work.runtime.ktx)
     kapt("androidx.room:room-compiler:2.7.2")

@@ -15,4 +15,11 @@ class TransactionRepository(private val dao: TransactionDao) {
     suspend fun delete(transaction: Transaction) {
         dao.delete(transaction)
     }
+    fun getTotalForDateRange(startDate: Long, endDate: Long): LiveData<Double?> {
+        return dao.getTotalForDateRange(startDate, endDate)
+    }
+
+    fun getTransactionsForDateRange(startDate: Long, endDate: Long): LiveData<List<Transaction>> {
+        return dao.getTransactionsForDateRange(startDate, endDate)
+    }
 }

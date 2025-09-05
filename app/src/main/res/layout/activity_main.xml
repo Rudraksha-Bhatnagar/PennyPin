@@ -10,10 +10,11 @@
         android:layout_width="405dp"
         android:layout_height="873dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -26,4 +27,32 @@
         tools:layout_editor_absoluteY="653dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/monthlyProgress"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:indicatorSize="200dp"
+        app:trackThickness="16dp"
+        app:indicatorColor="@color/black"
+        app:trackColor="@color/teal_200"
+        android:max="100"
+        android:progress="65"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Amount in the middle -->
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹13,000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@id/monthlyProgress"
+        app:layout_constraintBottom_toBottomOf="@id/monthlyProgress"
+        app:layout_constraintStart_toStartOf="@id/monthlyProgress"
+        app:layout_constraintEnd_toEndOf="@id/monthlyProgress"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
