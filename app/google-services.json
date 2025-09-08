@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "634067791642",
+    "project_id": "pennypin-3662a",
+    "storage_bucket": "pennypin-3662a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634067791642:android:90f9e3efb6637d119dc6a3",
+        "android_client_info": {
+          "package_name": "com.example.pennypin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzhqu4CH57NEaAr-3Ka39E1fSv9_nlIVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
