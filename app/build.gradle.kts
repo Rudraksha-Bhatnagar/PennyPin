@@ -50,8 +50,20 @@ dependencies {
     implementation(libs.room.ktx)
     implementation(libs.protolite.well.known.types)
     implementation(libs.androidx.material3.android)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.androidx.datastore.preferences.core.android)
+    implementation(libs.firebase.perf.ktx)
+    implementation(libs.play.services.cast.framework)
     kapt(libs.room.compiler)
+    implementation ("io.ktor:ktor-client-core:2.3.5")
 
+    // Engine for Android (instead of CIO, use OkHttp for Android)
+    implementation ("io.ktor:ktor-client-okhttp:2.3.5")
+
+    // JSON serialization
+    implementation ("io.ktor:ktor-client-content-negotiation:2.3.5")
+    implementation ("io.ktor:ktor-serialization-kotlinx-json:2.3.5")
     implementation(libs.androidx.ui.text.android)
     implementation(libs.androidx.room.common.jvm)
     implementation(libs.androidx.room.runtime.android)
@@ -60,14 +72,23 @@ dependencies {
     implementation("androidx.room:room-ktx:2.7.2") // for coroutines support
     implementation(libs.androidx.work.runtime.ktx)
     kapt("androidx.room:room-compiler:2.7.2")
+    implementation("com.google.code.gson:gson:2.10.1")
+        // ... your other dependencies
+
+        // Add this line for Jetpack DataStore
+        implementation ("androidx.datastore:datastore-preferences")
+
+        // You might also want the core dependency
+        implementation ("androidx.datastore:datastore-core")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
-    implementation("com.google.firebase:firebase-analytics")
+
 
 }

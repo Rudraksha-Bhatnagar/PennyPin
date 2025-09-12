@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_gradient"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- App Title -->
+        <TextView
+            android:text="Create Account"
+            android:textColor="@color/textPrimary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:hint="Full Name"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:backgroundTint="@color/textSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etupi"
+            android:hint="Upi id"
+            android:inputType="textPassword"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:backgroundTint="@color/textSecondary"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:backgroundTint="@color/textSecondary"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:backgroundTint="@color/textSecondary"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etRePassword"
+            android:hint="Re-Enter Password"
+            android:inputType="textPassword"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textSecondary"
+            android:backgroundTint="@color/textSecondary"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnSignup"
+            android:text="Sign Up"
+            android:textColor="@color/textPrimary"
+            android:backgroundTint="@color/colorButton"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Sign Up Redirect -->
+        <TextView
+            android:id="@+id/btnLoginRedirect"
+            android:text="Already have an account? Log In"
+            android:textColor="@color/textSecondary"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

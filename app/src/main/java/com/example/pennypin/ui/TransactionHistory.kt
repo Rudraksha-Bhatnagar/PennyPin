@@ -44,24 +44,24 @@ class TransactionHistory : AppCompatActivity() {
         var selectedEndDate: Long? = null
 
 
-        startDateButton.setOnClickListener {
+        startDateButton?.setOnClickListener {
             // Show DatePickerDialog, update selectedEndDate and button text
             showDatePickerDialog { year, month, dayOfMonth ->
                 val calendar = Calendar.getInstance().apply {
                     set(year, month, dayOfMonth)
                     setEndOfDay(this) // helper function that sets time to 23:59:59
                 }
-                selectedEndDate = calendar.timeInMillis
+                selectedStartDate = calendar.timeInMillis
 
                 // Convert Long -> java.util.Date -> format
                 startDateButton.text = SimpleDateFormat(
                     "dd/MM/yyyy",
                     Locale.getDefault()
-                ).format(Date(selectedEndDate!!))
+                ).format(Date(selectedStartDate!!))
             }
         }
 
-        endDateButton.setOnClickListener {
+        endDateButton?.setOnClickListener {
             // Show DatePickerDialog, update selectedEndDate and button text
             showDatePickerDialog { year, month, dayOfMonth ->
                 val calendar = Calendar.getInstance().apply {

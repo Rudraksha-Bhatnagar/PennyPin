@@ -5,10 +5,15 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Transaction::class], version = 1, exportSchema = false)
+@Database(
+    entities = [Transaction::class, UserProfile::class],
+    version = 2, // bumped version since we added a new table
+    exportSchema = false
+)
 abstract class PennyPinDatabase : RoomDatabase() {
 
     abstract fun transactionDao(): TransactionDao
+    abstract fun userProfileDao(): UserProfileDao
 
     companion object {
         @Volatile
@@ -20,7 +25,10 @@ abstract class PennyPinDatabase : RoomDatabase() {
                     context.applicationContext,
                     PennyPinDatabase::class.java,
                     "pennypin_database"
-                ).build()
+                )
+                    // wipes db on schema change (safe for dev, remove in prod)
+                    .fallbackToDestructiveMigration(false)
+                    .build()
                 INSTANCE = instance
                 instance
             }

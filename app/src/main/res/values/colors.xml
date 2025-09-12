@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+        <!-- Primary Theme Colors -->
+        <color name="colorPrimary">#1B1F3B</color> <!-- Dark Blue Background -->
+        <color name="colorPrimaryDark">#0F1230</color> <!-- Even Darker for Status Bar -->
+        <color name="colorAccent">#4CAF50</color> <!-- Green accent (Continue with Phone) -->
+        <color name="colorButton">#3B82F6</color> <!-- Blue button (Continue with Email) -->
+
+        <!-- Text Colors -->
+        <color name="textPrimary">#FFFFFF</color>
+        <color name="textSecondary">#B0B3C6</color>
+
+        <!-- Background Gradient -->
+        <color name="gradientStart">#0D0F2D</color>
+        <color name="gradientEnd">#1C1F4A</color>
+
+
 </resources>
